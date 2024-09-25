@@ -1,0 +1,43 @@
+{
+  "errcode": "0",
+  "errmsg": "成功",
+  "data": [
+	{
+		"id": "model_mdsn",
+		"name": "平陆运河马道枢纽",
+		"dataSource": "03",
+		"longitude": 108.93747962902248,
+		"latitude": 22.447625205981645,
+		"altitude": -60,
+		"path": "./gltf/mdsn-gltfpack8.glb",
+		"local": "gltf/mdsn-gltfpack8.glb",
+		"scale": [1, 1, 1],
+		"rotation": [90, 0, 0],
+		"document": "./pdf/马道枢纽_merged.pdf"
+	},
+	{
+		"id": "model_hzwkhdq",
+		"name": "杭州湾跨海大桥",
+		"dataSource": "02",
+		"longitude": 121.06144505185702,
+		"latitude": 30.51430770856156,
+		"altitude": -33,
+		"path": "./gltf/bridge.glb",
+		"local": "gltf/bridge.glb",
+		"scale": [0.76, 0.76, 0.76],
+		"rotation": [89.88, -13.9, 0]
+	},
+	{
+		"id": "model_qyssd",
+		"name": "齐岳山隧道",
+		"dataSource": "01",
+		"longitude": 108.74899377679695,
+		"latitude": 30.415490721872366,
+		"altitude": 0,
+		"path": "./gltf/19347859.glb",
+		"local": "gltf/19347859.glb",
+		"scale": [1, 1, 1],
+		"rotation": [0, 0, -158]
+	}
+  ]
+}

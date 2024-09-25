@@ -1,0 +1,9 @@
+@font-face {
+  font-family: PangMenZhengDao;
+  src: url('./PangMenZhengDao/PangMenZhengDao.eot');
+  src: url('./PangMenZhengDao/PangMenZhengDao.woff') format('woff'),
+    url('./PangMenZhengDao/PangMenZhengDao.ttf') format('truetype'),
+    url('./PangMenZhengDao/PangMenZhengDao.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}

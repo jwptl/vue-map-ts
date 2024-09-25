@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="renderer" content="webkit" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+    <title>辖区绘制工具</title>
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/static/lib/minemap/minemap.css" />
+    <link rel="stylesheet" href="/static/lib/minemap/minemap-dark.css" />
+    <link rel="stylesheet" href="/static/lib/edit/minemap-edit.css" />
+    <script src="/static/lib/minemap/minemap-4.7.8_1.js"></script>
+    <script src="/config.js"></script>
+    <script>
+      window.process = {};
+    </script>
+    <style>
+      html, body, #app {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+      }
+      .loader, .loader::before, .loader::after {
+        width: 2.5em;
+        height: 2.5em;
+        border-radius: 50%;
+        animation: load-animation 1.8s infinite ease-in-out;
+        animation-fill-mode: both;
+      }
+      .loader {
+        position: relative;
+        top: 0;
+        margin: 80px auto;
+        font-size: 10px;
+        color: #406eeb;
+        text-indent: -9999em;
+        transform: translateZ(0);
+        transform: translate(-50%, 0);
+        animation-delay: -0.16s;
+      }
+      .loader::before, .loader::after {
+        position: absolute;
+        top: 0;
+        content: "";
+      }
+      .loader::before {
+        left: -3.5em;
+        animation-delay: -0.32s;
+      }
+      .loader::after {
+        left: 3.5em;
+      }
+      @keyframes load-animation {
+        0%,
+        80%,
+        100% {
+          box-shadow: 0 2.5em 0 -1.3em;
+        }
+        40% {
+          box-shadow: 0 2.5em 0 0;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app">
+      <div class="loader"></div>
+    </div>
+    <script src="/static/lib/edit/minemap-edit.js"></script>
+    <script src="/static/lib/plot/dat.gui.min.js"></script>
+    <script src="/static/lib/plot/plot3d.js"></script>
+    <script src="/static/lib/turf.min.js"></script>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

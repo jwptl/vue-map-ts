@@ -1,0 +1,144 @@
+@import "./transition";
+@import "./element-plus";
+@import "./sidebar";
+@import "./dark";
+
+/* 自定义全局 CssVar */
+:root {
+  /* 左侧菜单展开、收起动画时长 */
+  --pure-transition-duration: 0.3s;
+}
+
+/* 灰色模式 */
+.html-grey {
+  filter: grayscale(100%);
+}
+
+/* 色弱模式 */
+.html-weakness {
+  filter: invert(80%);
+}
+
+/** 页面左右侧边栏样式 */
+.page-side {
+  width: 300px;
+  position: absolute;
+  top: 104px;
+  z-index: 10;
+  height: calc(100vh - 124px);
+  transform: translateX(0);
+  transition: transform .4s ease-in-out;
+  .side-content {
+    height: 100%;
+    padding-right: 12px;
+  }
+  .side-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    border: 1px dashed transparent;
+    color: #3d4181;
+    font-size: 2.5rem;
+    &:hover {
+      color: #068dff;
+    }
+  }
+  &.side-left {
+    padding-left: 22px;
+    left: 0;
+    .side-btn {
+      right: -50px;
+    }
+    &.side-hidden {
+      transform: translateX(-100%);
+    }
+  }
+  &.side-right {
+    width: 338px;
+    padding-right: 10px;
+    right: 0;
+    .side-btn {
+      left: -62px;
+    }
+    &.side-hidden {
+      transform: translateX(100%);
+    }
+  }
+}
+
+/** 功能模块样式 */
+.module-box {
+  position: relative;
+  border-radius: 6px;
+  overflow: hidden;
+  .module-content {
+    position: relative;
+    padding-top: 1px;
+    margin-top: -1px;
+    min-height: 150px;
+    background: #1d263c;
+    overflow: hidden;
+  }
+  .module-title {
+    width: 100%;
+    height: 44px;
+    line-height: 44px;
+    position: relative;
+    background: #3d4181;
+    overflow: hidden;
+    border-bottom: 2px solid #5b60b1;
+  }
+  .module-title-icon {
+    float: left;
+    width: 60px;
+    height: 60px;
+    margin-left: 52px;
+  }
+  .module-title-text {
+    float: left;
+    margin-left: 16px;
+    font-size: 15px;
+    font-weight: 700;
+    user-select: none;
+    color: #ffffff;
+  }
+  .module-title-ext{
+    float: right;
+    margin-right: 10px;
+    .operate-btn{
+      display: inline-block;
+      width: 32px;
+      height: 40px;
+      line-height: 42px;
+      vertical-align: middle;
+      text-align: center;
+      font-size: 18px;
+      color: #909399;
+      cursor: pointer;
+      &:hover {
+        color: #409eff;
+      }
+      svg {
+        display: inline;
+      }
+    }
+  }
+  &.no-box {
+    background: transparent;
+    box-shadow: none;
+    border: 2px solid transparent;
+  }
+}
+
+/** 气泡确认框样式 */
+.popover-confirm-text {
+  color: #eef0ff;
+  font-size: 12px;
+}
+.popover-confirm-btns {
+  text-align: right;
+  padding-top: 24px;
+}
